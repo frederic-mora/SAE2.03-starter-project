@@ -21,4 +21,4 @@ commit :
 -   git commit -m "update credentials"
 -   git push
   
-Si tout va bien, vous devez retrouver sur votre espace Github la modification que vous venez de réaliser.
+Si tout va bien, vous devez retrouver sur votre espace Github la modification que vous venez de réaliser !
