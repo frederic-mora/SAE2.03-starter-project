@@ -14,7 +14,7 @@
 
     <script type="module">
       import { NavBar } from "./component/NavBar/script.js";
-
+      import { Movie } from "./component/Movie/script.js";
       // Controleur
       // Rappel, écrire window.C plutôt que let C est nécessaire pour tester depuis la console du navigateur
       // Une fois l'application terminée, on pourrait remettre let C.
@@ -43,6 +43,11 @@
       V.renderNavBar = function (hAbout) {
         let header = document.querySelector("#header");
         header.innerHTML = NavBar.format(hAbout);
+      };
+
+      V.renderMovie = function (data) {
+        let content = document.querySelector("#header");
+        header.innerHTML = Movie.format(hAbout);
       };
 
       C.start(); // Démarre l'application
