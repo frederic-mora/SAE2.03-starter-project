@@ -1,0 +1,78 @@
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+    font-family: var(--ff-sans);
+  }
+  
+  .card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15);
+    font-family: var(--ff-sans);
+    background-color: var(--color-gray-darkest);
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.3);
+  }
+  
+  .card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 2 / 3;
+  }
+  
+  /* Titre très lisible avec fond noir */
+  .card__title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.75rem 1rem;
+    font-family: var(--ff-sans);
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.4),
+      transparent
+    );
+    color: var(--color-white);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    z-index: 1;
+    pointer-events: none;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* 🖥️ Tablette */
+  @media (min-width: 600px) {
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.75rem;
+      padding: 1.5rem;
+    }
+  }
+  
+  /* 💻 Desktop */
+  @media (min-width: 1024px) {
+    .cards {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      padding: 2rem;
+    }
+  
+    .card__title {
+      font-size: 1.1rem;
+      padding: 1rem;
+    }
+  }
+  
